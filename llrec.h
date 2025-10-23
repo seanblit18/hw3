@@ -80,11 +80,37 @@ Node* llfilter(Node* head, Comp pred);
 template <typename Comp>
 Node* llfilter(Node* head, Comp pred)
 {
-    //*********************************************
-    // Provide your implementation below
-    //*********************************************
+    if (head == nullptr) {
+        return head;
+    }
+ 
+    head->next = llfilter(head->next, pred);
+
+    if (pred(head->val)) {
+        Node* next = head->next;
+        delete head;
+        return next;
+    }
+
+    else {
+        return head;
+    }
+    /*
+    
+    if item should be removed
+        return true
+
+    else false
 
 
+    removal is based on predicate obj function which uses bool operator() (int)
+
+    template <typename Comp>
+    Node* llfilter(Node* head, Comp pred);
+
+    */
+
+    return nullptr;
 }
 
 #endif

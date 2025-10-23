@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "__debug": "cpp",
+        "deque": "cpp",
+        "exception": "cpp",
+        "fstream": "cpp",
+        "ios": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "concepts": "cpp"
+    }
+}
